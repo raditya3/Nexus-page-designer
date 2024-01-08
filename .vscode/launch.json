@@ -1,0 +1,17 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "/Users/adityarai/.nvm/versions/node/v21.1.0/bin/nx",
+      "args": ["serve", "client"],
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    }
+  ]
+}

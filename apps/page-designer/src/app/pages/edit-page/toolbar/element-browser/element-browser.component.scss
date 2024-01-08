@@ -1,0 +1,10 @@
+.list-item {
+    padding: 1rem 2rem;
+    background-color: #7ed9db;
+    border: #000000 solid 1px;
+    cursor: grab;
+}
+
+.list-item:active {
+    cursor: grabbing;
+}

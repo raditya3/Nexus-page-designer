@@ -1,0 +1,15 @@
+.container {
+    width: 100%;
+    display: flex;
+
+    .preview {
+        width: 70%;
+        height: 100%;
+    }
+
+    .toolbar {
+        margin-left: 0.5rem;
+        width: 30%;
+        height: 100%;
+    }
+}

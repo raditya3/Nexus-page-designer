@@ -1,0 +1,23 @@
+@import 'var';
+
+.root {
+    border: $primary-base dotted 1px;
+    padding: 2rem;
+    position: relative;
+}
+
+.add-element {
+    width: fit-content;
+    height: fit-content;
+    border: $primary-base solid 1px;
+    padding: 0.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.child-container {
+    position: relative;
+    padding: 2rem;
+}

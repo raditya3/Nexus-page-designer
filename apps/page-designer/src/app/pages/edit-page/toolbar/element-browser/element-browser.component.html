@@ -1,0 +1,6 @@
+<div class="list">
+    <div draggable="true" (dragstart)="dragStart($event,element.name)" *ngFor="let element of elementList"
+        class="list-item">
+        {{element.display}}
+    </div>
+</div>

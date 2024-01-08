@@ -1,0 +1,8 @@
+@import 'theme';
+
+.container {
+    border: $primary-base dotted 1px;
+    padding: 2rem;
+    position: relative;
+    width: fit-content;
+}

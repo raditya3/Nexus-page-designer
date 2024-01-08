@@ -1,0 +1,13 @@
+<div class="action-buttons">
+    <button (click)="preview()" class="primary-btn">Preview</button>
+</div>
+<div class="tabs">
+    <div *ngFor="let tabItem of tabs" class="tab-item" [class.active]="activeTab===tabItem.name"
+        (click)="activeTab=tabItem.name">
+        {{tabItem.display}}
+    </div>
+</div>
+
+<div>
+    <ng-content *ngComponentOutlet="activeElement"></ng-content>
+</div>

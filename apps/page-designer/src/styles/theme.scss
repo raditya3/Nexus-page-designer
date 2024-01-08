@@ -1,0 +1,9 @@
+@import 'var';
+
+.primary-btn {
+    background-color: $primary-base;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: fit-content;
+}
