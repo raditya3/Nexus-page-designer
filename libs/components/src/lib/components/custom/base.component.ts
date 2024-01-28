@@ -1,9 +1,9 @@
-import { ChangeDetectorRef, EventEmitter, Output } from "@angular/core";
+import { ChangeDetectorRef } from '@angular/core';
 
 export class BaseComponent {
-
-    constructor(private cdr: ChangeDetectorRef) { }
-    public triggerCdr() {
-        this.cdr.detectChanges();
-    }
+  [key: string]: unknown;
+  constructor(private cdr: ChangeDetectorRef) {}
+  public triggerCdr() {
+    this.cdr.detectChanges();
+  }
 }

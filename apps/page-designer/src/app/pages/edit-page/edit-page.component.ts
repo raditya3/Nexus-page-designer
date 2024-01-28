@@ -8,7 +8,7 @@ import { ILayout } from '@nexus/components';
   styleUrl: './edit-page.component.scss',
 })
 export class EditPageComponent {
-
+  public currentEditComponentId : string|undefined;
   public layout!: ILayout
   constructor(public layoutService: LayoutService) {
     layoutService.layout$.subscribe(_layout => {

@@ -1,3 +1,3 @@
 export interface ILayoutProps {
-    [key: string]: any;
+  [key: string]: never | string;
 }

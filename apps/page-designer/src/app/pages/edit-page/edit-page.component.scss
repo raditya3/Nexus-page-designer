@@ -2,14 +2,19 @@
     width: 100%;
     display: flex;
 
+  .edit-pane{
+    width: 25%;
+    height: 100%;
+  }
     .preview {
-        width: 70%;
+      margin-left: 0.5rem;
+        width: 50%;
         height: 100%;
     }
 
     .toolbar {
         margin-left: 0.5rem;
-        width: 30%;
+        width: 25%;
         height: 100%;
     }
 }

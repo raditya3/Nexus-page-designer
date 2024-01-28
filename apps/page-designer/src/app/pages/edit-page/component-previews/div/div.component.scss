@@ -1,9 +1,15 @@
-@import 'var';
+@import 'theme';
 
 .root {
     border: $primary-base dotted 1px;
     padding: 2rem;
     position: relative;
+}
+
+.options{
+  position: absolute;
+  top:5px;
+  left:5px;
 }
 
 .add-element {

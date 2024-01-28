@@ -1,1 +1,1 @@
-export type Prop = [string, any];
+export type Prop = [string, unknown];

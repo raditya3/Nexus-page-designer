@@ -1,6 +1,13 @@
-import { Component, ElementRef, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 import { PageContextService } from '../context.service';
-import { ILayout, IPage } from 'libs/components/src/types';
+import { ILayout, IPage } from '../../../types';
 
 @Component({
   selector: 'nexus-spa-config-renderer',
@@ -8,10 +15,13 @@ import { ILayout, IPage } from 'libs/components/src/types';
   styleUrl: './spa-config-renderer.component.scss',
 })
 export class SpaConfigRendererComponent implements OnInit, OnDestroy {
-
   @Input({ required: true }) config!: IPage;
 
-  constructor(private contextService: PageContextService, private renderer: Renderer2, private elementRef: ElementRef) { };
+  constructor(
+    private contextService: PageContextService,
+    private renderer: Renderer2,
+    private elementRef: ElementRef
+  ) {}
   public layout!: ILayout;
 
   ngOnDestroy(): void {
@@ -22,9 +32,11 @@ export class SpaConfigRendererComponent implements OnInit, OnDestroy {
     this.contextService.initialize(this.config.context);
     this.layout = this.config.layout;
     const style = this.config.style;
-    const styleElement = this.renderer.createElement("style");
+    const styleElement = this.renderer.createElement('style');
     this.renderer.setProperty(styleElement, 'textContent', style);
-    this.renderer.appendChild(this.elementRef.nativeElement.ownerDocument.head, styleElement);
+    this.renderer.appendChild(
+      this.elementRef.nativeElement.ownerDocument.head,
+      styleElement
+    );
   }
-
 }

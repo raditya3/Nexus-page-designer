@@ -1,4 +1,3 @@
-import { Type } from "@angular/core";
+import { BaseComponent } from './base.component';
 
-export const customComponents: { [key: string]: Type<any> } = {
-}
+export const customComponents: { [key: string]: typeof BaseComponent } = {};

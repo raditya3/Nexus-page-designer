@@ -2,11 +2,13 @@
   "root": true,
   "extends": ["plugin:lodash-fp/recommended"],
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
+  "plugins": ["@nx","unused-imports"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+
+        "@typescript-eslint/ban-ts-comment" : "warn",
         "@nx/enforce-module-boundaries": [
           "error",
           {

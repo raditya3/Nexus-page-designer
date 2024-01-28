@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "serve:page-designer": "nx serve page-designer",
     "watch:client": "nx serve client --poll 1000",
     "client-config:build": "nx run client-config:build",
-    "client-config:watch": "concurrently \"nodemon --ext ts --watch 'apps/client-config/src' --exec 'nx run client-config:build'\" \"npm run client-config:watch:copy\"",
-    "client-config:watch:copy": "nodemon --watch 'tmp/apps/client-config' --exec 'npm run copy-client-config'",
-    "copy-client-config": "cp -r tmp/apps/client-config/* dist/apps/client-config/",
-    "dev": "concurrently \"npm run watch:client\" \"npm run client-config:watch\""
+    "client-config:buid-copy:watch": "nodemon --ext ts --watch 'apps/client-config/src' --exec 'nx run client-config:build && node copy-client-config.js'",
+    "dev" : "concurrently \"npm run watch:client\" \"npm run client-config:buid-copy:watch\""
   },
   "private": true,
   "dependencies": {
@@ -77,11 +76,13 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-cypress": "^2.13.4",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
     "jest-environment-node": "^29.4.1",
     "jest-preset-angular": "~13.1.4",
     "jsonc-eslint-parser": "^2.1.0",
+    "ncp": "^2.0.0",
     "nodemon": "^3.0.2",
     "nx": "17.2.8",
     "prettier": "^2.6.2",

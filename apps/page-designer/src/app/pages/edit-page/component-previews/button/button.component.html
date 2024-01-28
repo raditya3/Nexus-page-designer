@@ -1,3 +1,8 @@
 <div class="container">
-    <div class="primary-btn">{{thisLayout.props?.innerHTML}}</div>
+  <div class="options">
+      <span class="material-symbols-outlined edit" (click)="markThisAsEdit()">
+edit
+</span>
+  </div>
+    <div class="primary-btn">{{thisLayout.props!['innerHTML']}}</div>
 </div>

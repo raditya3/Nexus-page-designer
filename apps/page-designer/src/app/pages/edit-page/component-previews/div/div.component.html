@@ -1,15 +1,20 @@
 <div class="root">
-
-    <div *ngIf="this.thisLayout.children?.length===0" (drop)="onDrop($event,0)" (dragover)="allowDrag($event)"
-        class="add-element">+</div>
-    <div *ngIf="this.thisLayout.children?.length!==0 then hasChildren"></div>
-    <ng-template #hasChildren>
-        <div *ngFor="let childLayout of this.thisLayout.children; index as idx">
+    <div class="options">
+      <span class="material-symbols-outlined edit" (click)="markThisAsEdit()">
+edit
+</span>
+    </div>
+    <div *ngIf=" this.thisLayout?.children?.length===0; then hasNoChildren; else hasChildren"></div>
+  <ng-template #hasNoChildren>
+      <div  (dragover)="allowDrag($event)" (drop)="onDrop($event,0)" class="add-element">+</div>
+  </ng-template>
+  <ng-template #hasChildren>
+        <ng-container  *ngFor="let childLayout of this.thisLayout!.children!; index as idx">
             <nexus-preview [layout]="childLayout"></nexus-preview>
             <div class="child-container">
                 <div (drop)="onDrop($event,idx)" (dragover)="allowDrag($event)" class="add-element">+</div>
             </div>
-        </div>
-    </ng-template>
+        </ng-container >
+  </ng-template>
 
 </div>

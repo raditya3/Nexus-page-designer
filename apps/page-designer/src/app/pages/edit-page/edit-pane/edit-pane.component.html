@@ -1,0 +1,18 @@
+<div>
+  {{componentMetadata?.display || "Select a component"}}
+</div>
+<div *ngIf="!!layout">
+  {{layout.props!["id"]}}
+</div>
+
+<div *ngIf="propKeyValue.length>0">
+  <div *ngFor="let propPair of propKeyValue" >
+    {{propPair[0]}}
+    <ng-container [ngSwitch]="propPair[1]">
+      <div *ngSwitchCase="PropType.STRING">
+        <input type="text">
+      </div>
+    </ng-container>
+  </div>
+  <button>Update</button>
+</div>

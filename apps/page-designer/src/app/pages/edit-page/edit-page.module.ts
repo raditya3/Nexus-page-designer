@@ -7,13 +7,15 @@ import { ElementBrowserComponent } from './toolbar/element-browser/element-brows
 import { PreviewComponent } from './preview/preview.component';
 import { LayoutService } from './services/layout/layout.service';
 import { PREVIEW_COMPONENT_DECLARATIONS } from './component-previews/preview-component.declarations';
+import { EditPaneComponent } from './edit-pane/edit-pane.component';
 @NgModule({
   declarations: [
     EditPageComponent,
     ToolbarComponent,
     ElementBrowserComponent,
     PreviewComponent,
-    ...PREVIEW_COMPONENT_DECLARATIONS
+    ...PREVIEW_COMPONENT_DECLARATIONS,
+    EditPaneComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,6 @@ import { PREVIEW_COMPONENT_DECLARATIONS } from './component-previews/preview-com
       },
     ]),
   ],
-  providers: [LayoutService]
+  providers: [LayoutService],
 })
-export class EditPageModule { }
+export class EditPageModule {}
