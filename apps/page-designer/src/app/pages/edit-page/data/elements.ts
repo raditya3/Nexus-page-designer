@@ -1,6 +1,7 @@
 import { Type } from '@angular/core';
 import { ButtonComponent } from '../component-previews/button/button.component';
 import { DivComponent } from '../component-previews/div/div.component';
+import { MultiColumnComponent } from '../component-previews/multi-column/multi-column.component';
 export enum PropType {
   STRING,
   BOOLEAN,
@@ -24,5 +25,11 @@ export const elements: Element[] = [
     name: 'button',
     block: ButtonComponent,
     props: {},
+  },
+  {
+    display: 'Multi Column',
+    name: 'multi-column',
+    block: MultiColumnComponent,
+    props: {}
   },
 ];

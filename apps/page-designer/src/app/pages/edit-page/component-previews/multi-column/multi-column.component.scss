@@ -1,0 +1,47 @@
+@import 'theme';
+
+.root {
+    border: $primary-base dotted 1px;
+    padding: 2rem;
+    position: relative;
+}
+
+.options{
+  position: absolute;
+  top:5px;
+  left:5px;
+}
+
+.add-element {
+    width: fit-content;
+    height: fit-content;
+    border: $primary-base solid 1px;
+    padding: 0.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.columns-root{
+  display: flex;
+}
+.column{
+  
+  border: 1px dotted #da8d28;
+}
+
+.add-element {
+    width: fit-content;
+    height: fit-content;
+    border: $primary-base solid 1px;
+    padding: 0.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.child-container {
+    position: relative;
+    padding: 2rem;
+}

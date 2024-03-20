@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "nuke": "rimraf node_modules && rimraf pnpm-lock.yaml",
+    "lint": "biome lint .",
     "serve:page-designer": "nx serve page-designer",
     "watch:client": "nx serve client --poll 1000",
     "client-config:build": "nx run client-config:build",
-    "client-config:buid-copy:watch": "nodemon --ext ts --watch 'apps/client-config/src' --exec 'nx run client-config:build && node copy-client-config.js'",
-    "dev" : "concurrently \"npm run watch:client\" \"npm run client-config:buid-copy:watch\""
+    "client-config:buid-copy:watch": "nodemon --ext ts --watch 'apps/client-config/src' --exec \"C:/Users/Aditya/AppData/Local/pnpm/pnpm.exe client-config:build && node copy-client-config.js\"",
+    "dev": "concurrently --kill-others -c \"auto\" \"pnpm client-config:buid-copy:watch\" \"pnpm watch:client\" --names \"config-watch,client-run\""
   },
   "private": true,
   "dependencies": {
@@ -42,6 +44,7 @@
     "@angular/cli": "~17.0.0",
     "@angular/compiler-cli": "~17.0.0",
     "@angular/language-service": "~17.0.0",
+    "@biomejs/biome": "1.6.1",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
     "@nx/angular": "^17.2.8",
@@ -69,6 +72,7 @@
     "@typescript-eslint/parser": "^6.9.1",
     "concurrently": "^8.2.2",
     "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.10.0",
     "cypress": "^13.0.0",
     "esbuild": "^0.19.2",
     "esbuild-loader": "^4.0.2",
@@ -89,6 +93,7 @@
     "react-refresh": "^0.10.0",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",
+    "style-loader": "^3.3.4",
     "swc-loader": "0.1.15",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.5.1",

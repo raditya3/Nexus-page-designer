@@ -18,6 +18,8 @@ export const getLayoutConfigFromElement = (
     config.children = [];
   } else if (element === 'button') {
     config.props!['innerHTML'] = 'Click Here';
+  } else if(element === "multi-column"){
+    config.children = [getLayoutConfigFromElement("div"),getLayoutConfigFromElement("div")];
   }
   return config;
 };

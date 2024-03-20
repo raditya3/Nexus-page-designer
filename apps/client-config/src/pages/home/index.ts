@@ -8,7 +8,7 @@ export const homePage: IPage = {
         name: 'h1',
         props: {
           class: 'header-class',
-          innerHTML: 'Sample Page Header',
+          innerHTML: 'Sample Page Headerss',
         },
       },
       {

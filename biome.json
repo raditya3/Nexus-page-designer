@@ -1,0 +1,34 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"style": {
+				"useTemplate": "off",
+				"noNonNullAssertion": "off",
+				"useImportType": "off",
+				"useNodejsImportProtocol":"off",
+				"useEnumInitializers":"off"
+			},
+			"complexity": {
+				"useLiteralKeys": "off",
+				"noForEach": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "warn"
+			}
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignore": ["node_modules", "dist"]
+	}
+}

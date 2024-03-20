@@ -106,9 +106,8 @@ export class LayoutRendererComponent implements AfterViewInit, OnDestroy {
         const tokens$ = tokens?.map((token) => {
           if (token.context === 'pageContext') {
             return this.getObservableFromToken(token.contextVariable);
-          } else {
-            return undefined;
           }
+            return undefined;
         });
         const sub = combineLatest(
           tokens$ as BehaviorSubject<Prop[1]>[]
@@ -198,7 +197,7 @@ export class LayoutRendererComponent implements AfterViewInit, OnDestroy {
       });
     } else {
       const ComponentClass = customComponents[this.layout.name];
-      if (ComponentClass == undefined) {
+      if (ComponentClass === undefined) {
         throw new Error('Invalid Component: ' + this.layout.name);
       }
       const customComponentsRef =

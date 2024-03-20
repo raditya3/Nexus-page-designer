@@ -14,9 +14,10 @@ function extractLodashTokens(str: string) {
   const regex = /_\.fns\.(\w+)/g;
   const tokens = [];
 
-  let match;
+  const match = regex.exec(str);
+
   // Loop over all matches
-  while ((match = regex.exec(str)) !== null) {
+  if (match !== null) {
     // The first capturing group is the token
     tokens.push(match[1]);
   }

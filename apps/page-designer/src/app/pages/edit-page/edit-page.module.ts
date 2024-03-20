@@ -8,6 +8,7 @@ import { PreviewComponent } from './preview/preview.component';
 import { LayoutService } from './services/layout/layout.service';
 import { PREVIEW_COMPONENT_DECLARATIONS } from './component-previews/preview-component.declarations';
 import { EditPaneComponent } from './edit-pane/edit-pane.component';
+import { MultiColumnComponent } from './component-previews/multi-column/multi-column.component';
 @NgModule({
   declarations: [
     EditPageComponent,
@@ -16,6 +17,7 @@ import { EditPaneComponent } from './edit-pane/edit-pane.component';
     PreviewComponent,
     ...PREVIEW_COMPONENT_DECLARATIONS,
     EditPaneComponent,
+    MultiColumnComponent,
   ],
   imports: [
     CommonModule,

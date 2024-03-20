@@ -1,0 +1,22 @@
+<div class="root">
+    <div class="options">
+      <span class="material-symbols-outlined edit" (click)="markThisAsEdit()">
+edit
+</span>
+    </div>
+
+
+<div class="columns-root">
+    <ng-container *ngFor="let column of thisLayout.children; index as idx">
+        <div class="column" >
+        <nexus-preview [layout]="column"></nexus-preview>
+    </div>
+        <div class="child-container">
+                <div (drop)="onDrop($event,idx)" (dragover)="allowDrag($event)" class="add-element">+</div>
+        </div>
+    </ng-container>
+    
+    
+</div>
+
+</div>
